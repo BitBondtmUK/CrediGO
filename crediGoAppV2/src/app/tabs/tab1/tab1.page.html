@@ -1,0 +1,97 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="openModal()">
+        <ion-icon slot="icon-only" color="dark" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Inicio</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content *ngIf="items" class="list-mini-content" class="ion-no-padding">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="arrow-dropdown"
+      pullingText="Pull to refresh"
+      refreshingSpinner="circles"
+      refreshingText="Refreshing...">
+    </ion-refresher-content>
+  </ion-refresher>
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-card class="ion-no-padding" mode="md">
+          <img src="../../../assets/demo1.jpg" alt="">
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-no-padding">
+        <ion-card class="ion-no-padding" mode="md">
+          <img src="../../../assets/demo2.jpg" alt="">
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-no-padding">
+        <ion-card class="ion-no-padding" mode="md">
+          <img src="../../../assets/demo3.jpg" alt="">
+        </ion-card>
+      </ion-col>
+      <ion-col class="ion-no-padding"> 
+        <ion-card class="ion-no-padding" mode="md">
+          <img src="../../../assets/demo4.jpg" alt="">
+          <ion-fab vertical="center" horizontal="end" slot="fixed">
+            <ion-fab-button color="light" size="small">
+              <ion-icon name="arrow-round-forward"></ion-icon>
+            </ion-fab-button>
+          </ion-fab>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  <ion-card (click)="openModal()">
+      <ion-item>
+      <ion-avatar slot="start">
+        <img src="../../../assets/user.png">
+      </ion-avatar>
+      <ion-input placeholder="¿Que estas pensando?, Usuario"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button color="light"><ion-icon name="camera"></ion-icon>Foto/video</ion-button>
+      <ion-button color="light"><ion-icon name="person-add"></ion-icon>Etiquetar amigos</ion-button>
+      <ion-button color="light"><ion-icon name="happy"></ion-icon>Sentimiento/actividad</ion-button>
+    </ion-item>
+  </ion-card>
+        <div *ngIf="items.length > 0" class="list-mini" class="ion-no-padding">
+            <ion-card *ngFor="let item of items" class="ion-no-padding">
+                <ion-item lines="none">
+                    <ion-avatar slot="start">
+                      <img src="../../../assets/user.png">
+                    </ion-avatar>
+                    <ion-label>Usuario</ion-label>
+                    <ion-note>11h ago</ion-note>
+                    <ion-button fill="clear"><ion-icon name="more"></ion-icon></ion-button>
+                </ion-item>
+                <img [src]="item.payload.doc.data().image">
+                <ion-card-content>
+                    <h1>{{item.payload.doc.data().description}}</h1>
+                    <ion-col>
+                        <ion-button fill="clear" size="small" [routerLink]="['/details', item.payload.doc.id]">...Ver más</ion-button>
+                    </ion-col>
+                </ion-card-content>
+                
+                  <ion-row class="ion-text-center">
+                    <ion-col class="ion-no-padding">
+                      <ion-button fill="clear" size="small"><ion-icon name="thumbs-up"></ion-icon>Me gusta</ion-button>
+                    </ion-col>
+                    <ion-col class="ion-no-padding">
+                      <ion-button fill="clear" size="small"><ion-icon name="text"></ion-icon>Comentar</ion-button>
+                    </ion-col>
+                    <ion-col class="ion-no-padding">
+                        <ion-button fill="clear" size="small"><ion-icon name="ios-redo"></ion-icon>Compartir</ion-button>
+                    </ion-col>
+                  </ion-row>
+              </ion-card>
+        </div>
+        <!-- <div *ngIf="items.length == 0" class="empty-list">
+          No has publicado nada aún.
+        </div> -->
+  </ion-content>

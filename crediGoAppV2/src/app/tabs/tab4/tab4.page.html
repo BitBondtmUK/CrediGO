@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button [routerLink]="['/new-task']">
+        <ion-icon slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Ingresos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+      <form #employeeForm="ngForm" (ngSubmit)="addEmployee(employeeForm)">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="employeeService.selectedEmployee._id">
+        <ion-item>
+          <ion-label position="stacked">Producto:</ion-label>
+          <ion-input type="text" name="name" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">ID:</ion-label>
+            <ion-input type="text" name="position" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.position"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Descripcion:</ion-label>
+            <ion-input type="text" name="office" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.office"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">Precio:</ion-label>
+            <ion-input type="text" name="salary" #name="ngModel" [(ngModel)]="employeeService.selectedEmployee.salary" value="0"></ion-input>
+        </ion-item>
+        <ion-button class="submit-btn" expand="block" fill="solid" type="submit">Guardar</ion-button>
+        <ion-button class="submit-btn" expand="block" fill="solid" (click)="resetForm(employeeForm)">Limpiar</ion-button>
+      </form>
+    </ion-card>
+    <ion-item *ngFor="let employee of employeeService.employees">
+        <ion-avatar slot="start">
+          <img src="../../../assets/imgs/thumbal.jpg">
+        </ion-avatar>
+        <ion-label>
+          {{ employee.name }}
+        </ion-label>
+        <p>{{ employee.position }}</p>
+        <p>{{ employee.office }}</p>
+        <a (click)="editEmployee(employee)">
+            <i class="material-icons">edit</i>
+          </a>
+          <a (click)="deleteEmployeeAlert(employee._id, employeeForm)">
+            <i class="material-icons">delete</i>
+          </a>
+    </ion-item>
+</ion-content>

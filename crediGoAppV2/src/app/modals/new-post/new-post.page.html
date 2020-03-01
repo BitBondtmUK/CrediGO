@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Crear publicación</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="ion-text-center">
+    <ion-row no-padding>
+      <ion-col size="8" offset="2">
+        <img *ngIf="img != null" [src]="image" alt="this is the image"/>
+      </ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col size="6" offset="3">
+        <!-- <ion-button fill="clear" expand="block" size="small" (click)="openImagePicker()">Elegir Foto</ion-button> -->
+        <!-- <img [src]="url" height="200"> <br/> -->
+        <input type='file' (change)="onSelectFile($event)">
+      </ion-col>
+    </ion-row>
+  </div>
+  <form [formGroup]="validations_form" (ngSubmit)="onSubmit(validations_form.value)">
+    <ion-item>
+        <ion-textarea formControlName="description" placeholder="¿Que estas pensando?, Usuario"></ion-textarea>
+    </ion-item>
+    <ion-button class="submit-btn" expand="block" type="submit" (click)="closeModal()">Publicar</ion-button>
+  </form>
+</ion-content>
