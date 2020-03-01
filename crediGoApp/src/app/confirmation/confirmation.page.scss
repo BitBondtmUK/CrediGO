@@ -1,0 +1,35 @@
+ion-content {
+    --background: #0d0d21;
+}
+
+.contenido {
+    text-align: center;
+}
+
+.Felizidades {
+    font-family: Helvetica;
+    font-size: 24px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.04px;
+    color: #ffffff;
+}
+
+.Transferencia-comple {
+    opacity: 0.6;
+    font-family: Helvetica;
+    font-size: 13px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.38;
+    letter-spacing: 0.02px;
+    text-align: center;
+    color: #ffffff;
+}
+
+ion-button {
+    --border-radius: 25px;
+}
