@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -36,15 +37,17 @@ export class ObtenerSaldoService {
     return this.http.get('https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/account-statement?accountNumber=4077641447&movementsNumber=2', {headers});
   }
 
-  // enviarDineros(destinationAccount: number, transactionAmount: number, description: string){
+  enviarDineros(){
 
-  //   const headers = new HttpHeaders({
-  //     'X-Client': '0425c644a72d4ec7bdf15c5d29b705b6',
-  //     'X-User': 'HACKATON',
-  //     'X-Password': '4d0313fcB8f54387bbfa67Da4E8eb7Ea',
-  //     'x-api-key': 'QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi'
-  //   });
+    const headers = new HttpHeaders({
+      'X-Client': '0425c644a72d4ec7bdf15c5d29b705b6',
+      'X-User': 'HACKATON',
+      'X-Password': '4d0313fcB8f54387bbfa67Da4E8eb7Ea',
+      'x-api-key': 'QoAvB9ddiF9udhlvD5U7818VdwrlqUcd1Jv5Ypqi'
+    });
 
-  //   this.http.post('https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/transfer', {headers});
-  // }
+    this.http.post('https://mwiuw3q1fj.execute-api.us-east-1.amazonaws.com/dev/v1/sandbox/checking-accounts/transfer', {headers})
+
+
+  }
 }
