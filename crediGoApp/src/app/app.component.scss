@@ -1,0 +1,20 @@
+ion-menu {
+    --min-width: 100%;
+}
+
+ion-header {
+    text-align: center;
+    img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+    }
+}
+
+ion-content {
+    text-align: center;
+}
+
+ion-button {
+    color: black;
+}
