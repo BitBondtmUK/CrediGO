@@ -11,28 +11,34 @@
 
         </div>
 
-        <div class="opciones">
+        <ion-menu-toggle>
+            <div class="opciones">
 
-            <ion-button fill="clear" expand="full">
-                Wallet
-            </ion-button>
 
-            <ion-button fill="clear" expand="full">
-                Mi Targeta
-            </ion-button>
 
-            <ion-button fill="clear" expand="full">
-                Historial de Transacciones
-            </ion-button>
+                <ion-button redirectTo="/wallet" fill="clear" expand="full">
+                    Wallet
+                </ion-button>
 
-            <ion-button fill="clear" expand="full">
-                Preferencias
-            </ion-button>
+                <ion-button redirectTo="/tarjeta" fill="clear" expand="full">
+                    Mi Tarjeta
+                </ion-button>
 
-            <ion-button fill="clear" expand="full">
-                Ayuda
-            </ion-button>
-        </div>
+                <ion-button redirectTo="/historial" fill="clear" expand="full">
+                    Historial de Transacciones
+                </ion-button>
+
+                <ion-button fill="clear" expand="full">
+                    Preferencias
+                </ion-button>
+
+                <ion-button fill="clear" expand="full">
+                    Ayuda
+                </ion-button>
+            </div>
+        </ion-menu-toggle>
+
+
 
     </ion-content>
 </ion-menu>
