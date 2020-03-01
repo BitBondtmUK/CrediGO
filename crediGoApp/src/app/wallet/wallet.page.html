@@ -1,0 +1,101 @@
+<ion-content class="ion-padding">
+
+
+    <div class="saldo">
+        <h6>Saldo total: </h6>
+        <h2>$9,258 <small>($925 USD)</small></h2>
+    </div>
+
+
+    <div>
+        <img src="../../assets/img/group.svg" class="Group">
+    </div>
+
+    <div class="btns">
+        <ion-row>
+            <ion-col>
+                <ion-button class="btn-rcv" color="btniniciar" expand="block">
+                    Transferir
+                </ion-button>
+            </ion-col>
+            <ion-col>
+                <ion-button class="btn-rcv" color="btniniciar" expand="block">
+                    Recibir
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </div>
+
+    <h2>Promociones</h2>
+
+    <ion-slides [options]="slideOpts">
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>Suscripciones</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Here you will find Spotify, Zign, Turbo Pluralsight, Skillshare and many more!
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>Puntos</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    ¡Aquí encontrarás Spotify, Zign, Turbo Pluralsight, Skillshare y muchos más!
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+        <ion-slide>
+            <ion-card>
+                <ion-card-header>
+                    <ion-card-title>Card Title</ion-card-title>
+                </ion-card-header>
+
+                <ion-card-content>
+                    Keep close to Nature's heart....
+                </ion-card-content>
+            </ion-card>
+        </ion-slide>
+    </ion-slides>
+
+    <h2>Historial de Transacciones</h2>
+
+    <div class="lista">
+        <ion-item lines="none">
+            <ion-icon name="airplane-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h3>Starbucks</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-icon name="airplane-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h3>Italika</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-icon name="airplane-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h3>Mala fama</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+        <ion-item lines="none">
+            <ion-icon name="airplane-outline" slot="start"></ion-icon>
+            <ion-label>
+                <h3>Inversion</h3>
+            </ion-label>
+            <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+        </ion-item>
+    </div>
+
+
+</ion-content>

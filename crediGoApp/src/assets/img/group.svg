@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="328" height="172" viewBox="0 0 328 172">
+    <defs>
+        <filter id="prefix__b" width="110.4%" height="130.6%" x="-5.2%" y="-15.3%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius="1.5" result="shadowSpreadOuter1"/>
+            <feOffset in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feMorphology in="SourceAlpha" radius="1.5" result="shadowInner"/>
+            <feOffset in="shadowInner" result="shadowInner"/>
+            <feComposite in="shadowOffsetOuter1" in2="shadowInner" operator="out" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="6"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.580392157 0 0 0 0 0.909803922 0 0 0 0 0.705882353 0 0 0 0.5 0"/>
+        </filter>
+        <filter id="prefix__d" width="225%" height="225%" x="-62.5%" y="-62.5%" filterUnits="objectBoundingBox">
+            <feOffset in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2.5"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.580392157 0 0 0 0 1 0 0 0 0 0.91372549 0 0 0 0.05 0"/>
+        </filter>
+        <linearGradient id="prefix__a" x1="63.172%" x2="61.599%" y1="5.733%" y2="57.179%">
+            <stop offset="0%" stop-color="#94FFE9"/>
+            <stop offset="100%" stop-color="#94FFE9" stop-opacity="0"/>
+        </linearGradient>
+        <circle id="prefix__e" cx="159" cy="43" r="6"/>
+        <path id="prefix__c" d="M11 136.4C57.875 136.4 57.875 9 104.75 9s46.875 52.92 93.75 52.92 46.875 72.52 93.75 72.52 46.875-13.72 93.75-13.72"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(0 5)">
+        <path fill="#16162B" d="M13 129H342V130H13zM13 64H342V65H13zM13 97H342V98H13zM0 0H329V1H0zM13 32H342V33H13z"/>
+        <path fill="url(#prefix__a)" d="M13 137.4C59.875 137.4 59.875 10 106.75 10s46.875 52.92 93.75 52.92 46.875 72.52 93.75 72.52 46.875-13.72 93.75-13.72v46.08H13v-30.4z"/>
+        <path fill="#19192C" d="M12 166H341V167H12z"/>
+        <use fill="#000" filter="url(#prefix__b)" xlink:href="#prefix__c"/>
+        <use stroke="#94FFE9" stroke-opacity=".87" stroke-width="3" xlink:href="#prefix__c"/>
+        <path fill="#FFF" fill-opacity=".1" d="M158.4 41H159.4V167H158.4z"/>
+        <g>
+            <use fill="#000" filter="url(#prefix__d)" xlink:href="#prefix__e"/>
+            <circle cx="159" cy="43" r="4.5" fill="#111125" stroke="#94FFE9" stroke-linejoin="square" stroke-width="3"/>
+        </g>
+    </g>
+</svg>

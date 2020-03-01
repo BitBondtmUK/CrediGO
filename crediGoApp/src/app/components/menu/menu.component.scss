@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+ion-menu {
+    --min-width: 100%;
+}
+
+ion-content {
+    --background: #3247e6;
+}
+
+.ion-header {
+    text-align: center;
+    margin-bottom: 30px;
+    img {
+        width: 120px;
+        height: 120px;
+        margin-top: 15px;
+        border-radius: 50%;
+    }
+}
+
+small,
+h6 {
+    color: white;
+    font-family: 'Muli', ;
+}
+
+ion-content {
+    text-align: center;
+}
+
+ion-button {
+    color: white;
+    letter-spacing: 0.05px;
+    font-family: 'Muli', ;
+    font-size: 18px;
+}
