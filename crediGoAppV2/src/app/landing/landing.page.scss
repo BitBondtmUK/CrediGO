@@ -1,34 +1,42 @@
-:root {
-  --ion-safe-area-top: 20px;
-  --ion-safe-area-bottom: 22px;
+ion-content {
+  --background: rgba(38, 38, 128, 1);
+  --background: -moz-linear-gradient(top, rgba(38, 38, 128, 1) 0%, rgba(17, 17, 33, 1) 100%);
+  --background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(38, 38, 128, 1)), color-stop(100%, rgba(17, 17, 33, 1)));
+  --background: -webkit-linear-gradient(top, rgba(38, 38, 128, 1) 0%, rgba(17, 17, 33, 1) 100%);
+  --background: -o-linear-gradient(top, rgba(38, 38, 128, 1) 0%, rgba(17, 17, 33, 1) 100%);
+  --background: -ms-linear-gradient(top, rgba(38, 38, 128, 1) 0%, rgba(17, 17, 33, 1) 100%);
+  --background: linear-gradient(to bottom, rgba(38, 38, 128, 1) 0%, rgba(17, 17, 33, 1) 100%);
 }
 
-.swiper-slide {
+.logotipos {
+  text-align: center;
   display: block;
 }
 
-ion-slide > img {
-  max-height: 80%;
-  max-width: 80%;
-  margin: 36px 0;
+.cg {
+  height: 161px;
 }
 
-ion-slides { --bullet-background-active: #d6006b; }
-
-.Rectngulo-1 {
-  background-image: linear-gradient(to bottom, #fe007f, #7f0040);
+.CrediGo {
+  width: 209.7px;
+  height: 150px;
 }
 
-.minerva-circulo2 {
-  width: 330px;
-  height: 330px;
-  object-fit: contain;
+.desc {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.jalo-h1 {
-  color: #98bd11;
+.desc-p {
+  height: 44px;
+  opacity: 0.7;
+  font-size: 17px;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: 1px;
+  color: #ffffff;
 }
 
-.jalo-p {
-  color: #98bd11;
+ion-button {
+  font-size: 20px;
 }

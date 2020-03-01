@@ -1,4 +1,4 @@
-<ion-content fullscreen scroll-y="false">
+<!-- <ion-content fullscreen scroll-y="false">
     <ion-slides pager="true">
         <ion-slide>
             <div class="Rectngulo-1">
@@ -22,7 +22,7 @@
             <p class="jalo-p">E¿Viajas solo? Puedes compartir o buscar turistas con gustos similares en la ciudad.</p>
             <br>
         </ion-slide>
-        <!-- <ion-slide>
+        <ion-slide>
             <div class="Rectngulo-1">
             <img src="../../assets/isometric/shop/star-rating.png" />
             </div>
@@ -30,10 +30,33 @@
             <ion-button expand="block" fill="clear" [routerLink]="'/login/'" routerDirection="forward">Comenzar
                 <ion-icon slot="end" name="arrow-forward"></ion-icon>
             </ion-button>
-        </ion-slide> -->
+        </ion-slide>
     </ion-slides>
 
     <ion-button class="ion-padding" expand="block" shape="round" [routerLink]="'/login/'" routerDirection="forward">Inicia sesión</ion-button>
     <ion-button class="ion-padding" expand="block" shape="round" [routerLink]="'/register/'" routerDirection="forward" fill="outline">Resgistrarme</ion-button>
+
+</ion-content> -->
+
+
+
+
+
+
+<ion-content class="ion-padding">
+
+
+    <div class="logotipos">
+        <img class="cg" src="../../assets/logo/cg.png" alt="Logotipo de credigo">
+        <img class="CrediGo" src="../../assets/logo/CrediGo.png" alt="">
+        <p class="desc-p">
+            Tus finanzas a tu manera , invierte y has crecer tu dinero
+        </p>
+    </div>
+
+    <div class="btns">
+        <ion-button color="btniniciar" expand="block" [routerLink]="'/login/'" routerDirection="forward">Iniciar sesion</ion-button>
+        <ion-button expand="block" [routerLink]="'/register/'" routerDirection="forward">Resgistrarme</ion-button>
+    </div>
 
 </ion-content>
