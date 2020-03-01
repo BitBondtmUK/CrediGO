@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ObtenerSaldoService } from '../services/obtener-saldo.service';
 
 @Component({
   selector: 'app-wallet',
@@ -7,12 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WalletPage implements OnInit {
 
+  NumCuenta: any;
+  saldoActivo: any;
+
   slideOpts = {
     initialSlide: 0,
     speed: 100
   };
 
-  constructor() { }
+  constructor(private saldo: ObtenerSaldoService) {
+    this.saldo.getSaldo()
+        .subscribe((data: any) => {
+          console.log('Account',data.accountBalance.accountNumber);
+          this.NumCuenta = data.accountBalance.accountNumber;
+          console.log('Saldo:',data.accountBalance.available);
+          this.saldoActivo = data.accountBalance.available;
+        });
+  }
 
   ngOnInit() {
   }

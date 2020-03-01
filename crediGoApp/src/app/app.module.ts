@@ -11,14 +11,20 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { MenuComponent } from './components/menu/menu.component';
 
+//servicios
+import { ObtenerSaldoService } from './services/obtener-saldo.service';
+
+import {HttpClientModule} from '@angular/common/http';
+
 
 @NgModule({
   declarations: [AppComponent,MenuComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [
     StatusBar,
     SplashScreen,
+    ObtenerSaldoService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

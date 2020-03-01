@@ -1,0 +1,38 @@
+ion-toolbar {
+    --background: #0d0d21;
+    ion-title {
+        color: white;
+        font-size: 20px;
+    }
+}
+
+ion-content {
+    --background: #0d0d21;
+}
+
+ion-icon {
+    color: white;
+    zoom: 1.5;
+}
+
+ion-item {
+    --ion-background-color: #0d0d21;
+}
+
+h3,
+h2,
+p {
+    color: white;
+}
+
+.recientes {
+    display: flex;
+}
+
+.recientes p {
+    font-size: 10px;
+}
+
+ion-avatar {
+    margin-left: 10px;
+}

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-contacts',
@@ -7,9 +8,32 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactsPage implements OnInit {
 
-  constructor() { }
+  constructor(public actionSheetController: ActionSheetController) { }
 
   ngOnInit() {
+  }
+
+  async presentActionSheet() {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Albums',
+      buttons: [
+        {
+          text: 'Transferir',
+          icon: 'heart',
+          handler: () => {
+            console.log('heart clicked');
+          }
+        },{
+        text: 'Cancel',
+        role: 'destructive',
+        icon: 'trash',
+        handler: () => {
+          console.log('Delete clicked');
+        }
+      }
+      ]
+    });
+    await actionSheet.present();
   }
 
 }
