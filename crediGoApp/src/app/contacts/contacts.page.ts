@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActionSheetController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-contacts',
@@ -8,7 +9,7 @@ import { ActionSheetController } from '@ionic/angular';
 })
 export class ContactsPage implements OnInit {
 
-  constructor(public actionSheetController: ActionSheetController) { }
+  constructor(public actionSheetController: ActionSheetController, public router: Router) { }
 
   ngOnInit() {
   }
@@ -21,7 +22,7 @@ export class ContactsPage implements OnInit {
           text: 'Transferir',
           icon: 'heart',
           handler: () => {
-            console.log('heart clicked');
+            this.router.navigate(['/con-chosen']);
           }
         },{
         text: 'Cancel',
@@ -35,5 +36,6 @@ export class ContactsPage implements OnInit {
     });
     await actionSheet.present();
   }
+
 
 }
