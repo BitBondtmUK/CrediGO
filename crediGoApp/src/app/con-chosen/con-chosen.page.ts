@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-con-chosen',
@@ -10,9 +12,35 @@ export class ConChosenPage implements OnInit {
   qrData = "0"; //Para integrar al createdCode
   createdCode = null;
 
-  constructor() { }
+  constructor(public alertController: AlertController, public router: Router) { }
 
   ngOnInit() {
+  }
+
+
+
+  async confirmar() {
+    const alert = await this.alertController.create({
+      header: 'Confirm!',
+      message: 'Message <strong>text</strong>!!!',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        }, {
+          text: 'Okay',
+          handler: () => {
+            this.router.navigate(['/historial']);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
   createCode() {
